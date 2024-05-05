@@ -7,7 +7,7 @@ data1 = pd.read_csv('data/dmds.csv')
 data = pd.read_csv('data/dmd_prcd.csv')
 st.header('Введенные вами данные:')
 
-#neoroReg=load_model('models/reg_model.keras')
+neoroReg=load_model('models/reg_model.keras')
 
 
 with open("models/Linreg_model.pkl","rb") as f:
