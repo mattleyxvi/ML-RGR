@@ -4,4 +4,4 @@ tensorflow
 pandas
 streamlit
 pickle
-sklearn
+scikit-learn
