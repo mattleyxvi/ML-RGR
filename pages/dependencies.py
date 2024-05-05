@@ -5,7 +5,7 @@ import pickle
 import seaborn as sns
 import numpy as np
 
-data = pd.read_csv('data\diamonds.csv')
+data = pd.read_csv('data/diamonds.csv')
 data = data.drop(columns = ['Unnamed: 0'])
 correlation_matrix = data.corr(numeric_only = True)
 
