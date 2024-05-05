@@ -1,6 +1,6 @@
-seaborn
-matplotlib
+streamlit
 tensorflow
 pandas
-streamlit
-scikit-learn
+pycaret
+matplotlib
+seaborn
