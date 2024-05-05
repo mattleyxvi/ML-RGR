@@ -1,5 +1,7 @@
-seaborn
-matplotlib
+streamlit
 tensorflow
 pandas
-keras
+pycaret
+matplotlib
+seaborn
+scikit-learn==1.2.2
