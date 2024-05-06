@@ -7,7 +7,7 @@ data1 = pd.read_csv('data/dmds.csv')
 data = pd.read_csv('data/dmd_prcd.csv')
 st.header('Введенные вами данные:')
 
-neoroReg=keras.models.load_model('models/keras_norm_model.keras')
+neoroReg=keras.models.load_model('models/model_MacConahi.keras')
 with open("models/Linreg_model.pkl","rb") as f:
     linReg=pickle.load(f)
 with open("models/Bagging_model.pkl","rb") as f:
