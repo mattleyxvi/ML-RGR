@@ -73,8 +73,8 @@ if getPredButton:
     st.write("Результат GradientBoostingRegressor:",round(float(gradientBoostingReg_result),3),'$')
     stackingReg_result=stackingReg.predict(value)
     st.write("Результат StackingRegressor:",round(float(stackingReg_result),3),'$')
-    #neoroReg_result=neoroReg.predict(value)
-    #st.write("Результат нейронной сети:",round(float(neoroReg_result),3),'$')
+    neoroReg_result=neoroReg.predict(value)
+    st.write("Результат нейронной сети:",round(float(neoroReg_result),3),'$')
 
 
 
@@ -102,7 +102,7 @@ if uploaded_file:
     if getPredButton4:
         stackingReg_result=stackingReg.predict(dataframe)
         st.write("Результат StackingRegressor:", pd.DataFrame(stackingReg_result,columns=['predicted_price']))
-    #if getPredButton5:
-        #neoroReg_result=neoroReg.predict(dataframe)
-        #st.write("Результат нейронной сети:", pd.DataFrame(neoroReg_result,columns=['predicted_price']))
+    if getPredButton5:
+        neoroReg_result=neoroReg.predict(dataframe)
+        st.write("Результат нейронной сети:", pd.DataFrame(neoroReg_result,columns=['predicted_price']))
 
