@@ -1,13 +1,13 @@
 import streamlit as st
 import pandas as pd
 import pickle
-from tensorflow.keras.models import load_model
+import tensorflow as tf
 
 data1 = pd.read_csv('data/dmds.csv')
 data = pd.read_csv('data/dmd_prcd.csv')
 st.header('Введенные вами данные:')
 
-#neoroReg=load_model('models/reg_model.keras')
+neoroReg=tf.saved_model.load('models/reg_model.keras')
 with open("models/Linreg_model.pkl","rb") as f:
     linReg=pickle.load(f)
 with open("models/Bagging_model.pkl","rb") as f:
