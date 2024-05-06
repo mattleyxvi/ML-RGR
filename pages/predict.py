@@ -7,34 +7,6 @@ data1 = pd.read_csv('data/dmds.csv')
 data = pd.read_csv('data/dmd_prcd.csv')
 st.header('Введенные вами данные:')
 
-data = {'Location': [10],
-        'MinTemp': [10.0],
-        'MaxTemp': [10.0], 
-        'Rainfall': [0.1],
-        'WindGustDir': [2],
-        'WindGustSpeed': [44.0],
-        'Month': [2], 
-        'Day': [3],
-        'Pressure9am': [900.0],
-        'Humidity9am': [25.0],
-        'Wind9am': [10], 
-        'Temperature9am': [2.0],
-        'Pressure3pm': [950.0],
-        'Humidity3pm': [50.0],
-        'Wind3pm': [10], 
-        'Temperature3pm': [3.0],
-        'WindSpeed9am': [20.0],
-        'WindSpeed3pm': [20.0],
-        'RainToday': [0]}
-df = pd.DataFrame(data)
-X = df.values.flatten()
-X = X.reshape(1, -1)
-
-model = keras.models.load_model('models/MLP.keras')      
-prediction = (model.predict(X)>0.5).astype("int32")
-st.write(f"{prediction}")
-
-
 neoroReg=keras.models.load_model('models/keras_model.keras')
 with open("models/Linreg_model.pkl","rb") as f:
     linReg=pickle.load(f)
